@@ -8,6 +8,9 @@ iidx 곡들의 난이도를 측정하는 코드
 
 ## 과정
  1. iidx 플레이어의 플레이 기록을 [공식 홈페이지](https://p.eagate.573.jp/game/2dx/26/top/index.html) 를 통해 크롤링하여 얻어온다. (playdata/playdata.js 이용)
+  1.1. 구글 크롬 주소창에
+  javascript:(!function(){var  s=document.createElement("script");s.id="iidxme";s.type="text/javascript";s.src="http://localhost/test.js";document.head.appendChild(s);}());
+  
  2. 플레이어들의 플레이 기록을 통하여 해당 유저의 실력을 측정합니다. 현재는 플레이어가 클리어한 곡들 중 가장 어려운 10곡을 선택하여 클리어 한 곡 난이도의 평균으로 플레이어 실력을 측정하였습니다. 처음 시작시 곡 난이도는 클리어 레이트를 기반으로 측정하였습니다. 측정된 값을 score 라고 부릅니다. (skill.js 이용)
  3. 곡의 난이도를 측정합니다. 방법은 해당 곡의 클리어자들의 score 평균으로 곡 난이도를 측정합니다. (songdiff.js 이용)
  4. 2~3의 내용을 반복하면 곡 난이도가 점점 수렴합니다.
