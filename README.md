@@ -8,6 +8,7 @@ iidx 곡들의 난이도를 측정하는 코드
 
 ## 과정
  1. iidx 플레이어의 플레이 기록을 [공식 홈페이지](https://p.eagate.573.jp/game/2dx/26/top/index.html) 를 통해 크롤링하여 얻어온다. (playdata/playdata.js 이용)
+ 
   1.1. 구글 크롬 주소창에
   javascript:(!function(){var  s=document.createElement("script");s.id="iidxme";s.type="text/javascript";s.src="http://localhost/test.js";document.head.appendChild(s);}());
   
